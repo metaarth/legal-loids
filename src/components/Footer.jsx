@@ -111,16 +111,18 @@ const Footer = () => {
             <ul className="space-y-2 sm:space-y-3 text-primary-200 text-xs sm:text-sm">
               <li className="leading-relaxed">
                 <strong className="text-white">Head Office:</strong><br />
-                A-59, Sector-27, Noida-201301, India
+                Unit 410 – Tower - A, Enkay Towers,<br />
+                Phase V, Sector 19, Udyog Vihar, Gurugram
               </li>
               <li className="leading-relaxed">
-                <strong className="text-white">New Delhi Office:</strong><br />
-                A2/69 – Manu Apartment, Mayur Vihar,<br />
-                New Delhi, Delhi 110091, India
+                <strong className="text-white">Noida Office:</strong><br />
+                617, Wave Silver Tower,<br />
+                Sector – 18, Noida, 201301
               </li>
               <li className="leading-relaxed mt-1 sm:mt-2">
-                <strong className="text-white">Associate Office:</strong><br />
-                C-32, Subhash Nagar, Agra-282010, India
+                <strong className="text-white">Chandigarh Office:</strong><br />
+                Unit No. 228, Advocates Society,<br />
+                Sector 49A, Chandigarh - 160047
               </li>
               <li>
                 <a href="tel:+918881668058" className="text-primary-200 hover:text-white transition-colors duration-200 block">
