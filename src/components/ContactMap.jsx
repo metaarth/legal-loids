@@ -14,24 +14,27 @@ L.Icon.Default.mergeOptions({
 // Office locations
 const OFFICES = [
   {
-    lat: 28.575926,
-    lng: 77.332674,
-    address: 'A-59, Sector-27, Noida-201301, India',
+    lat: 28.496889,
+    lng: 77.085305,
+    address: 'Unit 410 – Tower - A, Enkay Towers, Phase V, Sector 19, Udyog Vihar, Gurugram',
     title: 'Legaloids Law Offices – Head Office',
   },
   {
-    lat: 28.6095917,
-    lng: 77.2875685,
-    address: 'Legaloids Law Offices',
-    title: 'Legaloids Law Offices',
+    lat: 28.5717216,
+    lng: 77.3246219,
+    address: '617, Wave Silver Tower, Sector – 18, Noida, 201301',
+    title: 'Legaloids Law Offices – Noida Office',
+  },
+  {
+    lat: 30.6955,
+    lng: 76.751,
+    address: 'Unit No. 228, Advocates Society, Sector 49A, Chandigarh - 160047',
+    title: 'Legaloids Law Offices – Chandigarh Office',
   },
 ];
 
-// Center point between both offices (for initial view)
-const MAP_CENTER = [
-  (OFFICES[0].lat + OFFICES[1].lat) / 2,
-  (OFFICES[0].lng + OFFICES[1].lng) / 2,
-];
+// Center on Head Office (Gurugram); FitBounds adjusts to all markers
+const MAP_CENTER = [OFFICES[0].lat, OFFICES[0].lng];
 
 function FitBounds({ offices, isMobile }) {
   const map = useMap();

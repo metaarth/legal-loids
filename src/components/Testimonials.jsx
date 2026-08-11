@@ -13,19 +13,19 @@ const Testimonials = () => {
   const testimonials = [
     {
       image: '',
-      name: 'Carl Smith',
+      name: 'Arjun Mehta',
       quote:
         'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
     },
     {
       image: '',
-      name: 'John Lockwood',
+      name: 'Priya Sharma',
       quote:
         'Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
     },
     {
       image: '',
-      name: 'Joyce Kroell',
+      name: 'Vikram Malhotra',
       quote:
         'Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
     },
