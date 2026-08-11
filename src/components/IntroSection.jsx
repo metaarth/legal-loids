@@ -35,12 +35,12 @@ const IntroSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-20 -mt-32 z-10">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section ref={sectionRef} className="relative py-10 sm:py-16 md:py-20 -mt-16 sm:-mt-24 md:-mt-32 z-10">
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <div
             ref={(el) => (cardsRef.current[0] = el)}
-            className="bg-white p-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300"
+            className="bg-white p-5 sm:p-8 rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 min-w-0"
             onMouseEnter={(e) => {
               gsap.to(e.currentTarget, {
                 y: -10,
@@ -56,15 +56,15 @@ const IntroSection = () => {
               });
             }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Need Legal Services?</h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Need Legal Services?</h2>
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
               Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
               blind texts.
             </p>
           </div>
           <div
             ref={(el) => (cardsRef.current[1] = el)}
-            className="bg-gradient-to-br from-primary-600 to-primary-800 p-8 rounded-xl shadow-2xl text-white transform hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-br from-primary-600 to-primary-800 p-5 sm:p-8 rounded-xl shadow-2xl text-white transform hover:scale-105 transition-all duration-300 min-w-0"
             onMouseEnter={(e) => {
               gsap.to(e.currentTarget, {
                 y: -10,
@@ -80,14 +80,14 @@ const IntroSection = () => {
               });
             }}
           >
-            <h2 className="text-3xl font-bold mb-4">Call now 088816 68058</h2>
-            <p className="text-lg mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 break-words">Call now 088816 68058</h2>
+            <p className="text-base sm:text-lg mb-3 sm:mb-4">
               Email us at{' '}
               <a href="mailto:admin@legaloids.com" className="underline hover:text-primary-200 transition-colors">
                 admin@legaloids.com
               </a>
             </p>
-            <p className="text-lg leading-relaxed">
+            <p className="text-base sm:text-lg leading-relaxed">
               Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
               blind texts.
             </p>

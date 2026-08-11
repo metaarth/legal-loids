@@ -139,29 +139,29 @@ const ComplianceDeskPage = () => {
   }, []);
 
   return (
-    <>
+    <div className="w-full min-w-0 overflow-x-hidden">
       <section
         ref={heroRef}
-        className="relative h-[50vh] sm:h-[55vh] md:h-[60vh] bg-cover bg-center bg-no-repeat"
+        className="relative min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh] flex items-center bg-cover bg-center bg-no-repeat py-12 sm:py-16 md:py-0"
         style={{ backgroundImage: 'url(/images/hero_2.jpg)' }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
-        <div className="relative z-10 h-full flex items-center justify-center text-white">
-          <div className="container mx-auto px-4 sm:px-6 text-center">
+        <div className="relative z-10 w-full min-w-0">
+          <div className="container mx-auto px-4 sm:px-6 max-w-7xl text-center">
             <p className="text-xs sm:text-sm font-semibold text-primary-200 uppercase tracking-wider mb-3">
               Legaloids
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 px-4">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 px-1 sm:px-4 break-words text-balance">
               Compliance Desk
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto px-4 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-3xl mx-auto px-1 sm:px-4 leading-relaxed break-words">
               General information on compliance and corporate regulatory topics. This page is for informational purposes
               only and does not constitute legal advice.
             </p>
-            <div className="mt-8 flex justify-center px-4">
+            <div className="mt-8 flex justify-center px-2 sm:px-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg bg-primary-700 text-white font-semibold hover:bg-primary-600 transition-colors duration-200 shadow-lg"
+                className="inline-flex w-full max-w-xs sm:max-w-none sm:w-auto items-center justify-center px-8 py-3.5 rounded-lg bg-primary-700 text-white text-sm sm:text-base font-semibold hover:bg-primary-600 transition-colors duration-200 shadow-lg"
               >
                 Contact
               </Link>
@@ -170,60 +170,62 @@ const ComplianceDeskPage = () => {
         </div>
       </section>
 
-      <section id="service-catalogue" className="py-12 sm:py-16 md:py-20 bg-gray-50 scroll-mt-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 sm:mb-12 md:mb-14">
+      <section id="service-catalogue" className="py-10 sm:py-16 md:py-20 bg-gray-50 scroll-mt-20 w-full min-w-0">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="text-center mb-8 sm:mb-12 md:mb-14 px-1">
             <p className="text-xs sm:text-sm font-semibold text-primary-600 uppercase tracking-wider mb-2">
               Information only
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 max-w-3xl mx-auto mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 max-w-3xl mx-auto mb-3 sm:mb-4 break-words text-balance">
               Illustrative areas (non-exhaustive)
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed break-words">
               The following lists are general in nature. Any mandate is subject to conflict checks, agreed scope, and
               terms confirmed with the firm in writing.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {serviceCategories.map((cat) => {
               const Icon = cat.icon;
               return (
                 <article
                   key={cat.title}
-                  className={`rounded-xl border bg-white p-6 sm:p-8 flex flex-col transition-shadow duration-200 hover:shadow-md ${
+                  className={`rounded-xl border bg-white p-4 sm:p-6 md:p-8 flex flex-col min-w-0 transition-shadow duration-200 hover:shadow-md ${
                     cat.highlight
-                      ? 'md:col-span-2 xl:col-span-3 border-primary-200 bg-primary-50/40'
+                      ? 'sm:col-span-2 xl:col-span-3 border-primary-200 bg-primary-50/40'
                       : 'border-gray-200 hover:border-primary-200'
                   }`}
                 >
-                  <div className="flex gap-4 mb-5">
-                    <div className="w-11 h-11 sm:w-12 sm:h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-4 mb-4 sm:mb-5 min-w-0">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 mx-auto sm:mx-0">
                       <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-600" strokeWidth={1.5} />
                     </div>
-                    <div className="min-w-0">
-                      <h3 className="text-lg sm:text-xl font-bold text-gray-900">{cat.title}</h3>
-                      <p className="mt-1 text-sm sm:text-base text-gray-600 leading-relaxed">{cat.description}</p>
+                    <div className="min-w-0 flex-1 text-center sm:text-left">
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 break-words">{cat.title}</h3>
+                      <p className="mt-1 text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed break-words">
+                        {cat.description}
+                      </p>
                     </div>
                   </div>
-                  <ul className="space-y-2.5 mt-auto">
+                  <ul className="space-y-2.5 mt-auto text-left">
                     {cat.items.map((line) => (
                       <li
                         key={line}
-                        className="text-sm sm:text-base pl-4 border-l-2 border-primary-600/40 text-gray-700 leading-snug"
+                        className="text-xs sm:text-sm md:text-base pl-3 sm:pl-4 border-l-2 border-primary-600/40 text-gray-700 leading-snug break-words hyphens-auto"
                       >
                         {line}
                       </li>
                     ))}
                   </ul>
                   {cat.highlight && (
-                    <div className="mt-8 pt-6 border-t border-primary-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                      <p className="text-sm text-gray-700">
+                    <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-primary-200 flex flex-col gap-4 min-w-0">
+                      <p className="text-xs sm:text-sm text-gray-700 break-words">
                         To discuss whether the firm can assist on a specific matter, please use the contact page.
                       </p>
                       <Link
                         to="/contact"
-                        className="inline-flex justify-center items-center px-6 py-3 rounded-lg bg-primary-700 text-white font-semibold hover:bg-primary-600 transition-colors shrink-0"
+                        className="inline-flex w-full sm:w-auto justify-center items-center px-6 py-3 rounded-lg bg-primary-700 text-white text-sm font-semibold hover:bg-primary-600 transition-colors sm:self-end"
                       >
                         Contact
                       </Link>
@@ -236,16 +238,18 @@ const ComplianceDeskPage = () => {
         </div>
       </section>
 
-      <section className="py-14 sm:py-16 md:py-20 bg-primary-900 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-xl sm:text-2xl font-bold mb-4">Specific legal advice</h3>
-          <p className="text-primary-200 max-w-2xl mx-auto mb-8 text-sm sm:text-base leading-relaxed">
+      <section className="py-12 sm:py-16 md:py-20 bg-primary-900 text-white w-full min-w-0">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl text-center">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 px-1 break-words text-balance">
+            Specific legal advice
+          </h3>
+          <p className="text-primary-200 max-w-2xl mx-auto mb-6 sm:mb-8 text-xs sm:text-sm md:text-base leading-relaxed px-1 break-words">
             Advice depends on the facts and the law applicable at the relevant time. If you wish to instruct the firm,
             please make contact through the channels provided on this website.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center px-10 py-4 rounded-lg bg-white text-primary-900 font-semibold hover:bg-primary-50 transition-colors duration-200"
+            className="inline-flex w-full max-w-xs sm:max-w-none sm:w-auto mx-auto items-center justify-center px-8 sm:px-10 py-3.5 sm:py-4 rounded-lg bg-white text-primary-900 text-sm sm:text-base font-semibold hover:bg-primary-50 transition-colors duration-200"
           >
             Contact
           </Link>
@@ -253,7 +257,7 @@ const ComplianceDeskPage = () => {
       </section>
 
       <GoToTop />
-    </>
+    </div>
   );
 };
 

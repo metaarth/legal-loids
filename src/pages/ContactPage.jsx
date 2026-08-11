@@ -98,18 +98,21 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1">Head Office</h3>
-                    <p className="text-xs sm:text-sm text-gray-600">A-59, Sector-27,<br />Noida-201301, India</p>
-                    {/* <p className="text-xs sm:text-sm text-gray-600 mt-2 sm:mt-3">
-                      <strong>New Delhi Office:</strong><br />
-                      A2/69 – Manu Apartment,<br />
-                      Mayur Vihar, New Delhi,<br />
-                      Delhi 110091, India
+                    <p className="text-xs sm:text-sm text-gray-600">
+                      Unit 410 – Tower - A, Enkay Towers,<br />
+                      Phase V, Sector 19, Udyog Vihar,<br />
+                      Gurugram
                     </p>
                     <p className="text-xs sm:text-sm text-gray-600 mt-2 sm:mt-3">
-                      <strong>Associate Office:</strong><br />
-                      C-32, Subhash Nagar,<br />
-                      Agra-282010, India
-                    </p> */}
+                      <strong>Noida Office:</strong><br />
+                      617, Wave Silver Tower,<br />
+                      Sector – 18, Noida, 201301
+                    </p>
+                    <p className="text-xs sm:text-sm text-gray-600 mt-2 sm:mt-3">
+                      <strong>Chandigarh Office:</strong><br />
+                      Unit No. 228, Advocates Society,<br />
+                      Sector 49A, Chandigarh - 160047
+                    </p>
                   </div>
                 </div>
 
@@ -264,12 +267,12 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Map Section – Noida Head Office */}
+      {/* Map Section – Office Locations */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">Find Us</h2>
           <p className="text-sm sm:text-base text-gray-600 mb-6 max-w-2xl">
-            Head Office: A-59, Sector-27, Noida-201301, India
+            Head Office: Unit 410 – Tower - A, Enkay Towers, Phase V, Sector 19, Udyog Vihar, Gurugram
           </p>
           <ContactMap />
         </div>

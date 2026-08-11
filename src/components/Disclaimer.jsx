@@ -82,7 +82,7 @@ const Disclaimer = () => {
       {/* Modal */}
       <div
         ref={modalRef}
-        className="relative z-10 bg-white rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto"
+        className="relative z-10 bg-white rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl w-full min-w-0 max-h-[95vh] sm:max-h-[90vh] overflow-y-auto overflow-x-hidden"
       >
         <div ref={contentRef} className="p-4 sm:p-6 md:p-8 lg:p-12">
           {/* Header */}

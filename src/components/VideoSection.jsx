@@ -85,7 +85,7 @@ const VideoSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div
           ref={videoRef}
-          className="relative h-96 lg:h-screen bg-cover bg-center bg-no-repeat"
+          className="relative min-h-[16rem] h-64 sm:h-96 lg:h-screen bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(/images/blog-4.jpg)' }}
         >
           <div className="absolute inset-0 bg-primary-900/40"></div>
@@ -113,13 +113,13 @@ const VideoSection = () => {
         </div>
         <div
           ref={contentRef}
-          className="bg-gray-50 flex items-center p-8 lg:p-16"
+          className="bg-gray-50 flex items-center p-5 sm:p-8 lg:p-16 min-w-0"
         >
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <div className="space-y-4 sm:space-y-6 min-w-0">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 break-words">
               Far far away, behind the word mountains
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
               Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
               texts far from the countries Vokalia and Consonantia, there live the blind texts.
             </p>

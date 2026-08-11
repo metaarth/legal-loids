@@ -79,7 +79,7 @@ const Blog = () => {
             One day however
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
           {blogPosts.slice(0, isMobile ? 6 : blogPosts.length).map((post, index) => (
             <article
               key={index}

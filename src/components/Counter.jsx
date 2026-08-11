@@ -124,7 +124,9 @@ const Counter = () => {
                 <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-2 sm:mb-3 text-white tracking-tight">
                   {counter.value.toLocaleString()}+
                 </div>
-                <div className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-white/90 uppercase tracking-wider">{counter.label}</div>
+                <div className="text-xs sm:text-sm md:text-base lg:text-lg font-medium text-white/90 uppercase tracking-wider break-words text-balance px-1 max-w-full mx-auto">
+                  {counter.label}
+                </div>
               </div>
             );
           })}

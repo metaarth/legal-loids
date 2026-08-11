@@ -177,7 +177,7 @@ const Navbar = () => {
           isMenuOpen ? '' : 'pointer-events-none'
         }`}
       >
-        <div className="flex flex-col h-full p-10 pt-28">
+        <div className="flex flex-col h-full px-5 py-6 pt-24 sm:p-10 sm:pt-28">
           <ul className="space-y-1">
             {menuItems.map((item, index) => (
               <li
@@ -266,8 +266,8 @@ const Navbar = () => {
             <div className="space-y-5 text-primary-200">
               <div>
                 <p className="text-sm font-semibold text-white mb-3 tracking-wide uppercase">Contact Us</p>
-                <p className="text-sm leading-relaxed">A-59, Sector-27, Noida-201301</p>
-                <p className="text-sm leading-relaxed">New Delhi, India</p>
+                <p className="text-sm leading-relaxed">Unit 410 – Tower - A, Enkay Towers</p>
+                <p className="text-sm leading-relaxed">Phase V, Sector 19, Udyog Vihar, Gurugram</p>
               </div>
               <div>
                 <a

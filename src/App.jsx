@@ -43,7 +43,7 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white w-full min-w-0 overflow-x-hidden">
       {/* Disclaimer Modal */}
       <Disclaimer />
 
@@ -61,7 +61,7 @@ function AppContent() {
       )}
 
       <Navbar />
-      <main className={`pt-20 ${location.pathname === '/' ? 'bg-black md:bg-white' : ''}`}>
+      <main className={`pt-20 w-full min-w-0 overflow-x-hidden ${location.pathname === '/' ? 'bg-black md:bg-white' : ''}`}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />

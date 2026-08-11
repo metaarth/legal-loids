@@ -52,26 +52,28 @@ const BlogSinglePage = () => {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative h-[60vh] bg-cover bg-center bg-no-repeat"
+        className="relative min-h-[40vh] h-[50vh] sm:h-[60vh] bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: 'url(/images/hero_3.jpg)' }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
-        <div className="relative z-10 h-full flex items-center justify-center text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4">Lorem ipsum dolor sit amet</h1>
-            <p className="text-xl text-gray-200">February 12, 2020 • by Colorlib</p>
+        <div className="relative z-10 h-full flex items-center justify-center text-white px-2">
+          <div className="container mx-auto px-4 text-center min-w-0">
+            <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-3 sm:mb-4 break-words leading-tight">
+              Lorem ipsum dolor sit amet
+            </h1>
+            <p className="text-sm sm:text-lg md:text-xl text-gray-200">February 12, 2020 • by Colorlib</p>
           </div>
         </div>
       </section>
 
       {/* Blog Content */}
-      <section ref={contentRef} className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <section ref={contentRef} className="py-10 sm:py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Main Content */}
-            <div className="lg:col-span-2 space-y-8">
-              <div className="prose prose-lg max-w-none">
-                <p className="text-xl text-gray-700 leading-relaxed font-medium">
+            <div className="lg:col-span-2 space-y-6 sm:space-y-8 min-w-0">
+              <div className="max-w-none overflow-x-auto text-sm sm:text-base md:text-lg space-y-4 sm:space-y-6 [&_p]:text-gray-600 [&_p]:leading-relaxed">
+                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed font-medium">
                   Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
@@ -109,12 +111,12 @@ const BlogSinglePage = () => {
 
               {/* Comments Section */}
               <div className="pt-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-8">6 Comments</h3>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">6 Comments</h3>
                 <div className="space-y-8">
                   {/* Comment 1 */}
-                  <div className="flex gap-4">
-                    <img src="/images/person_2.jpg" alt="Jacob Smith" className="w-16 h-16 rounded-full object-cover" />
-                    <div className="flex-1">
+                  <div className="flex gap-3 sm:gap-4 min-w-0">
+                    <img src="/images/person_2.jpg" alt="Jacob Smith" className="w-12 h-12 sm:w-16 sm:h-16 shrink-0 rounded-full object-cover" />
+                    <div className="flex-1 min-w-0">
                       <h4 className="font-bold text-gray-900 mb-1">Jacob Smith</h4>
                       <p className="text-sm text-gray-500 mb-3">January 9, 2018 at 2:21pm</p>
                       <p className="text-gray-600 mb-3">When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove...</p>
@@ -123,19 +125,19 @@ const BlogSinglePage = () => {
                   </div>
 
                   {/* Comment 2 with nested */}
-                  <div className="flex gap-4">
-                    <img src="/images/person_3.jpg" alt="Chris Meyer" className="w-16 h-16 rounded-full object-cover" />
-                    <div className="flex-1">
+                  <div className="flex gap-3 sm:gap-4 min-w-0">
+                    <img src="/images/person_3.jpg" alt="Chris Meyer" className="w-12 h-12 sm:w-16 sm:h-16 shrink-0 rounded-full object-cover" />
+                    <div className="flex-1 min-w-0">
                       <h4 className="font-bold text-gray-900 mb-1">Chris Meyer</h4>
                       <p className="text-sm text-gray-500 mb-3">January 9, 2018 at 2:21pm</p>
                       <p className="text-gray-600 mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
                       <button className="text-primary-600 hover:text-primary-700 font-semibold">Reply</button>
 
                       {/* Nested Comment */}
-                      <div className="mt-6 ml-8 pl-6 border-l-2 border-gray-200">
-                        <div className="flex gap-4">
-                          <img src="/images/person_5.jpg" alt="Chintan Patel" className="w-12 h-12 rounded-full object-cover" />
-                          <div className="flex-1">
+                      <div className="mt-6 ml-0 sm:ml-8 pl-4 sm:pl-6 border-l-2 border-gray-200 min-w-0">
+                        <div className="flex gap-3 sm:gap-4 min-w-0">
+                          <img src="/images/person_5.jpg" alt="Chintan Patel" className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 rounded-full object-cover" />
+                          <div className="flex-1 min-w-0">
                             <h4 className="font-bold text-gray-900 mb-1">Chintan Patel</h4>
                             <p className="text-sm text-gray-500 mb-3">January 9, 2018 at 2:21pm</p>
                             <p className="text-gray-600 mb-3">Far far away, behind the word mountains...</p>
@@ -147,9 +149,9 @@ const BlogSinglePage = () => {
                   </div>
 
                   {/* Comment 3 */}
-                  <div className="flex gap-4">
-                    <img src="/images/person_1.jpg" alt="Jean Doe" className="w-16 h-16 rounded-full object-cover" />
-                    <div className="flex-1">
+                  <div className="flex gap-3 sm:gap-4 min-w-0">
+                    <img src="/images/person_1.jpg" alt="Jean Doe" className="w-12 h-12 sm:w-16 sm:h-16 shrink-0 rounded-full object-cover" />
+                    <div className="flex-1 min-w-0">
                       <h4 className="font-bold text-gray-900 mb-1">Jean Doe</h4>
                       <p className="text-sm text-gray-500 mb-3">January 9, 2018 at 2:21pm</p>
                       <p className="text-gray-600 mb-3">Even the all-powerful Pointing has no control about the blind texts...</p>
@@ -231,7 +233,7 @@ const BlogSinglePage = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:col-span-1 space-y-8">
+            <div className="lg:col-span-1 space-y-6 sm:space-y-8 min-w-0">
               {/* Search */}
               <div className="bg-gray-50 p-6 rounded-xl">
                 <form className="relative">

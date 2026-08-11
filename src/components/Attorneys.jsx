@@ -59,6 +59,13 @@ const Attorneys = () => {
     },
     {
       image: '',
+      name: 'Raghav Chabra',
+      role: 'Senior Partner',
+      description:
+        'Expert in commercial and civil litigation having 10+ years of experience.',
+    },
+    {
+      image: '',
       name: 'Pallavi Tiwari',
       role: 'Associate Partner',
       description:

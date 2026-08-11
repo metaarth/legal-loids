@@ -100,7 +100,7 @@ const LegacyPage = () => {
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-10 sm:mb-12 md:mb-16 text-center px-4">Our Values</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
             {[
               { title: 'Excellence', description: 'Commitment to the highest standards in all we do' },
               { title: 'Integrity', description: 'Unwavering ethical standards and transparency' },

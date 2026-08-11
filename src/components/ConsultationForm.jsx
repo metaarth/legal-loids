@@ -108,9 +108,11 @@ const ConsultationForm = () => {
         >
           <div className="absolute inset-0 bg-primary-900/60"></div>
         </div>
-        <div className="bg-gray-50 p-8 lg:p-16 flex items-center">
-          <div ref={formRef} className="w-full max-w-2xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">Free Legal Advice</h2>
+        <div className="bg-gray-50 p-5 sm:p-8 lg:p-16 flex items-center min-w-0">
+          <div ref={formRef} className="w-full max-w-2xl mx-auto min-w-0">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 break-words">
+              Free Legal Advice
+            </h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div ref={(el) => (inputsRef.current[0] = el)}>

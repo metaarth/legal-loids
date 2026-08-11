@@ -144,7 +144,7 @@ const PeoplePage = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-block px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 md:py-4 bg-white text-primary-600 text-xs sm:text-sm md:text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="inline-block w-full max-w-xs sm:max-w-none sm:w-auto text-center px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 md:py-4 bg-white text-primary-600 text-xs sm:text-sm md:text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             Join Us
           </Link>

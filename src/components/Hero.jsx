@@ -75,7 +75,7 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative h-screen w-full overflow-hidden"
+      className="relative min-h-[100dvh] h-screen w-full max-w-[100vw] overflow-hidden"
     >
       {slides.map((slide, index) => (
         <div
@@ -91,18 +91,19 @@ const Hero = () => {
       ))}
 
       <div className="relative z-10 h-full flex items-center justify-center">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto text-center text-white">
-            <div ref={textRef} className="space-y-8">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto text-center text-white min-w-0">
+            <div ref={textRef} className="space-y-4 sm:space-y-8">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight px-1 break-words">
                 {slides[currentSlide].title}
               </h1>
-              <h2 className="text-lg md:text-xl lg:text-2xl text-gray-100 font-light max-w-3xl mx-auto leading-relaxed">
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 font-light max-w-3xl mx-auto leading-relaxed px-2">
                 {slides[currentSlide].subtitle}
               </h2>
-              <div className="pt-6">
+              <div className="pt-4 sm:pt-6">
                 <button
-                  className="px-10 py-4 bg-primary-600 hover:bg-primary-700 text-white text-base font-semibold rounded-md shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 tracking-wide uppercase text-sm"
+                  type="button"
+                  className="block w-full max-w-xs sm:max-w-none sm:inline-block sm:w-auto mx-auto px-6 sm:px-10 py-3 sm:py-4 bg-primary-600 hover:bg-primary-700 text-white text-sm sm:text-base font-semibold rounded-md shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 tracking-wide uppercase text-center"
                   onMouseEnter={(e) => {
                     gsap.to(e.target, { scale: 1.02, duration: 0.2 });
                   }}
@@ -119,7 +120,7 @@ const Hero = () => {
       </div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+      <div className="absolute bottom-6 sm:bottom-12 left-1/2 transform -translate-x-1/2 z-20 flex flex-wrap justify-center gap-2 sm:space-x-3 sm:gap-0 max-w-[95vw] px-2">
         {slides.map((_, index) => (
           <button
             key={index}

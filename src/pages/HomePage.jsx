@@ -345,7 +345,7 @@ const HomePage = () => {
     <>
       <div 
         ref={containerRef} 
-        className={`relative ${isMobile ? 'overflow-y-auto bg-black' : 'overflow-hidden min-h-screen'}`}
+        className={`relative w-full min-w-0 overflow-x-hidden ${isMobile ? 'overflow-y-auto bg-black' : 'overflow-hidden min-h-screen'}`}
         style={isMobile ? { minHeight: `${sections.length * 100}vh` } : {}}
       >
         {/* Right-side tracker */}
@@ -406,7 +406,7 @@ const HomePage = () => {
           <section
             key={section.id}
             ref={(el) => (slidesRef.current[index] = el)}
-            className={`${isMobile ? 'relative min-h-screen w-full' : 'absolute inset-0'} ${
+            className={`${isMobile ? 'relative min-h-screen w-full min-w-0' : 'absolute inset-0 w-full min-w-0'} ${
               activeSection === index 
                 ? 'z-10' 
                 : previousSection === index 
@@ -423,9 +423,9 @@ const HomePage = () => {
 
             <div className={`relative z-10 ${isMobile ? 'min-h-screen' : 'min-h-screen'} flex items-center justify-center py-12 md:py-0`}>
               <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="max-w-5xl mx-auto text-center text-white">
-                  <div className="space-y-4 sm:space-y-6 md:space-y-8">
-                    <h1 className="section-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight tracking-tight px-4">
+                <div className="max-w-5xl mx-auto text-center text-white min-w-0 px-1">
+                  <div className="space-y-4 sm:space-y-6 md:space-y-8 break-words">
+                    <h1 className="section-title text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight tracking-tight px-3 sm:px-4">
                       {section.title}
                     </h1>
                     <h2 className="section-subtitle text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-100 font-light max-w-3xl mx-auto leading-relaxed px-4">

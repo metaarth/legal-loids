@@ -283,7 +283,7 @@ const ExpertisePage = () => {
             <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8 px-4">
               As a trusted partner for businesses in India and internationally, we deliver integrated legal solutions tailored to complex commercial challenges. Our multidisciplinary team combines deep industry knowledge with strategic insights to drive client success.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6 mt-6 sm:mt-8 md:mt-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 md:gap-4 lg:gap-6 mt-6 sm:mt-8 md:mt-12">
               {whyChooseUs.map((item, index) => (
                 <div key={index} className="text-center px-2 sm:px-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 md:mb-4">
@@ -312,7 +312,7 @@ const ExpertisePage = () => {
               Explore our comprehensive range of legal services, optimized for international standards and client-centric outcomes
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-6 lg:gap-8">
             {services.slice(0, isMobile ? 6 : services.length).map((service, index) => {
               const IconComponent = service.icon;
               return (
@@ -365,7 +365,7 @@ const ExpertisePage = () => {
               Legaloids Law Offices partners with diverse industries, providing sector-specific legal consulting to navigate regulatory complexities and drive growth
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-5 lg:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-5 lg:gap-6">
             {industries.slice(0, isMobile ? 6 : industries.length).map((industry, index) => (
               <div
                 key={index}
